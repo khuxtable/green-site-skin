@@ -33,7 +33,7 @@
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+			<url>LICENSE.txt</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -81,6 +81,19 @@
 		<url>http://github.com/khuxtable/green-site-skin</url>
 	</scm>
 	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+			    <targetPath>META-INF</targetPath>
+				<directory>${basedir}</directory>
+				<includes>
+					<include>LICENSE.txt</include>
+					<include>README.txt</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
